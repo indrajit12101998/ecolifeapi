@@ -25,14 +25,15 @@
       "inversedBy": "products"
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "price": {
       "type": "integer"
@@ -48,6 +49,12 @@
       "relation": "manyToMany",
       "target": "api::seller.seller",
       "mappedBy": "products"
+    },
+    "isOffer": {
+      "type": "boolean"
+    },
+    "feature": {
+      "type": "boolean"
     }
   }
 }
